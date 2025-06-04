@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class form extends JPanel{
 
-    private Map<String, JTextField> fieldsMap;
+    private Map<String, JTextField> fieldsMap = new LinkedHashMap<>();
 
     public form(){
 

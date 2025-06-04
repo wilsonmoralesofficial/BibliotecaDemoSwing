@@ -18,7 +18,6 @@ public class formTest extends JPanel {
         setLayout(new GridBagLayout());
         fieldsMap = new LinkedHashMap<>();
         GridBagConstraints gbc = new GridBagConstraints(); //Tiene varias propiedades que se pueden modificar para controlar el diseño
-
         // Configuración básica para GridBagConstraints
         gbc.insets = new Insets(5, 5, 5, 5); // Espaciado entre componentes
         gbc.anchor = GridBagConstraints.WEST; // Alinear componentes a la izquierda

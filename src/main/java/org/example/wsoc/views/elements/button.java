@@ -6,13 +6,12 @@ import java.awt.event.ActionListener;
 
 public class button {
 
-    private JButton button;
+    public JButton button;
 
-    public JPanel createRightButtonPanel(String buttonText,ActionListener actionListener){
-        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT)); // Alinea los botones a la derecha
+    public JButton createRightButtonPanel(String buttonText,ActionListener actionListener){
+
         button = new JButton(buttonText);
-        buttonPanel.add(button);
         button.addActionListener(actionListener);
-        return buttonPanel;
+        return button;
     }
 }
