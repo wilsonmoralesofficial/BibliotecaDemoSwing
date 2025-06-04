@@ -1,4 +1,4 @@
-package org.example.wsoc.views.elements;
+package org.example.wsoc.view.elements;
 
 import javax.swing.*;
 import java.awt.*;

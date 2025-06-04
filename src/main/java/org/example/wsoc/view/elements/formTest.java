@@ -1,4 +1,4 @@
-package org.example.wsoc.views.componentsView;
+package org.example.wsoc.view.elements;
 
 import javax.swing.*;
 import java.awt.*;
@@ -72,6 +72,7 @@ public class formTest extends JPanel {
     }
 
     // --- Método main para probar la clase ---
+    /*
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Formulario Dinámico de Prueba");
@@ -114,4 +115,6 @@ public class formTest extends JPanel {
             formPanel.setFieldValues(valoresIniciales);
         });
     }
+    */
 }
+

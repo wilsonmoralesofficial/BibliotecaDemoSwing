@@ -1,9 +1,9 @@
-package org.example.wsoc.views.bookFormView;
+package org.example.wsoc.view.bookFormView;
 
-import org.example.wsoc.views.bookListView.bookList;
-import org.example.wsoc.views.elements.button;
-import org.example.wsoc.views.elements.form;
-import org.example.wsoc.views.elements.initialFrame;
+import org.example.wsoc.view.bookListView.bookList;
+import org.example.wsoc.view.elements.button;
+import org.example.wsoc.view.elements.form;
+import org.example.wsoc.view.elements.initialFrame;
 
 import javax.swing.*;
 import java.awt.*;

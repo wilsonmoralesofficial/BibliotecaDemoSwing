@@ -1,8 +1,8 @@
-package org.example.wsoc.views.bookListView;
-import org.example.wsoc.views.bookFormView.bookForm;
-import org.example.wsoc.views.elements.button;
-import org.example.wsoc.views.elements.initialFrame;
-import org.example.wsoc.views.elements.table;
+package org.example.wsoc.view.bookListView;
+import org.example.wsoc.view.bookFormView.bookForm;
+import org.example.wsoc.view.elements.button;
+import org.example.wsoc.view.elements.initialFrame;
+import org.example.wsoc.view.elements.table;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -74,7 +74,10 @@ public class bookList {
     public static void showBookListPanel(){
         InitialWindow.setVisible(true);
     }
+
+    /*
     public static void main(String[] args) {
         createInitialView();
     }
+     */
 }

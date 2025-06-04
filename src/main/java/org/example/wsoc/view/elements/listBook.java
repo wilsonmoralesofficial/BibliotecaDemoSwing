@@ -1,4 +1,4 @@
-package org.example.wsoc.views.componentsView;
+package org.example.wsoc.view.elements;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
