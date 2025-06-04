@@ -1,11 +1,11 @@
 package org.example.wsoc.view.bookListView;
+import org.example.wsoc.presenter.bookListPresenter;
 import org.example.wsoc.view.bookFormView.bookForm;
 import org.example.wsoc.view.elements.button;
 import org.example.wsoc.view.elements.initialFrame;
 import org.example.wsoc.view.elements.table;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,25 +19,29 @@ public class bookList {
     private static table bookTable = new table();
 
     private static button bookButton =  new button();
+    private  static bookListPresenter presenteList = new bookListPresenter();
 
-    public void bookList(){
-
-    }
+    public bookList(){createInitialView();}
 
     public static void createInitialView(){
 
-        String[] columns = {"Titulo","Autor","ISBN","Año de Publicación"};
-        String[][] datos = {{}};
-        JPanelButton.add(createBookButtonRight("Registrar Libro",actionButtonCreateBook()));
-        JPanelButton.add(editBookButtonRight("Editar Libro",actionButtonEditBook()));
-        InitialWindow.add(JPanelButton,BorderLayout.NORTH);
+        String[] columns = {"Id","Titulo","Autor","ISBN","Año de Publicación"};
+        String[][] datos = getBooksAvailable();
+        createButtonsTable();
         createBookTable(datos,columns);
         InitialWindow.setVisible(true);
-        bookForm bookForm = new bookForm();
-
-
     }
 
+    private static String[][] getBooksAvailable(){
+        String[][] books = {{}};
+        presenteList.getBooks();
+        return books;
+    }
+    private static void createButtonsTable(){
+        JPanelButton.add(createBookButtonRight("Registrar Libro",actionButtonCreateBook()));
+        JPanelButton.add(editBookButtonRight("Editar Libro Selecionado",actionButtonEditBook()));
+        InitialWindow.add(JPanelButton,BorderLayout.NORTH);
+    }
     private static void createBookTable(String[][]data,String[]columns){
         InitialWindow.add(bookTable.addJpanelTable(data,columns));
     }
@@ -66,18 +70,21 @@ public class bookList {
         return new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Mostrar Formulario Editar");
+                bookListPresenter.editSelectedRow(bookTable.listTable);
+                //System.out.println("Mostrar Formulario Editar");
             }
         };
     }
 
-    public static void showBookListPanel(){
-        InitialWindow.setVisible(true);
+    public static void showBookListPanel(boolean show){
+        InitialWindow.setVisible(show);
     }
 
-    /*
-    public static void main(String[] args) {
-        createInitialView();
+
+
+    /*public static void main(String[] args) {
+        //createInitialView();
     }
      */
+
 }

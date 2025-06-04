@@ -58,8 +58,7 @@ public class bookForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 InitialWindow.setVisible(false);
-                bookList bookList = new bookList();
-                bookList.showBookListPanel();
+                bookList.showBookListPanel(true);
             }
         };
     }

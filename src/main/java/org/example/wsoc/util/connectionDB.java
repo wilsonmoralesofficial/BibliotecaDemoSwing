@@ -13,9 +13,13 @@ public class connectionDB {
 
         // Bloque estático para cargar las variables de entorno al iniciar la clase
         static {
-            DB_URL = System.getenv("DB_URL");
-            DB_USERNAME = System.getenv("DB_USERNAME");
-            DB_PASSWORD = System.getenv("DB_PASSWORD");
+            //DB_URL = System.getenv("DB_URL");
+            //DB_USERNAME = System.getenv("DB_USERNAME");
+            //DB_PASSWORD = System.getenv("DB_PASSWORD");
+
+            DB_URL = "jdbc:mysql://localhost:3306/demoswingbiblioteca";
+            DB_USERNAME = "root";
+            DB_PASSWORD = "";
 
             // Opcional: Verificar si las variables se cargaron correctamente
             if (DB_URL == null || DB_USERNAME == null || DB_PASSWORD == null) {
@@ -69,7 +73,7 @@ public class connectionDB {
             }
         }
 
-        public static void main(String[] args) {
+        /*public static void main(String[] args) {
             Connection conn = null;
             try {
                 conn = getConnection(); // Obtener la conexión
@@ -90,4 +94,5 @@ public class connectionDB {
                 closeConnection(conn); // Asegúrate de cerrar la conexión en el bloque finally
             }
         }
+         */
 }

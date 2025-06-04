@@ -1,15 +1,17 @@
 package org.example.wsoc.main;
 
 import javax.swing.*;
-import org.example.wsoc.view.bookListView.*;
-import org.example.wsoc.view.bookFormView.*;
+import org.example.wsoc.view.bookListView.bookList;
+import org.example.wsoc.view.bookFormView.bookForm;
 public class bibliotecaApp {
 
     public static void main(String[] args) {
         // Asegúrate de que toda la manipulación de la UI se ejecute en el Event Dispatch Thread (EDT)
-        SwingUtilities.invokeLater(() -> {
-            // 1. Crear la instancia de la Vista
-            bookList bookList = new bookList(); // Instancia la vista concreta
+
+            // 1. Crear la instancia de las Vistas
+            bookList bookList = new bookList(); // Ininicializa el bookListPanel y lo muestra
+            bookForm bookForm = new bookForm(); // Inicializa el bookFormPanel y
+                                                // espera instrucciones de la bookList Class
 
             // 2. Crear las dependencias que el Presentador necesita
             // (En una app más grande, usarías Inyección de Dependencias aquí)
@@ -22,6 +24,5 @@ public class bibliotecaApp {
             //    Decirle al Presentador que inicialice la Vista
             //loginPresenter.initView(); // Podría configurar valores iniciales, mostrar errores, etc.
 
-        });
     }
 }

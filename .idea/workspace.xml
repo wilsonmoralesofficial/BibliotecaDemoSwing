@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0810a-3f02-4ddb-8124-655b8c59e1ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/main/bibliotecaApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/bookCopy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/bookCopyTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/bookTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/views/bookFormView/bookForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/views/bookListView/bookList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/views/elements/button.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/views/elements/form.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/views/elements/formTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/views/elements/initialFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/views/elements/listBook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/views/elements/table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/main/bibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/main/bibliotecaApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/util/connectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/util/connectionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,20 @@
       <recent name="C:\Users\wsoc\Desktop\BootCamp\project-bootcamp\BibliotecaDemoSwing\src\main\java\org\example\wsoc\views" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.org.example.wsoc.views.bookListView.bookList">
+  <component name="RunManager" selected="Application.bibliotecaApp">
+    <configuration name="bibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.wsoc.main.bibliotecaApp" />
+      <module name="BibliotecaDemoSwing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.wsoc.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="bookList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.wsoc.views.bookList" />
       <module name="BibliotecaDemoSwing" />
@@ -77,19 +91,6 @@
     </configuration>
     <configuration name="formTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.wsoc.views.formTest" />
-      <module name="BibliotecaDemoSwing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.wsoc.views.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="initial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.wsoc.views.initial" />
       <module name="BibliotecaDemoSwing" />
       <extension name="coverage">
         <pattern>
@@ -129,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.bibliotecaApp" />
         <item itemvalue="Application.org.example.wsoc.views.bookListView.bookList" />
         <item itemvalue="Application.org.example.wsoc.views.componentsView.formTest" />
         <item itemvalue="Application.bookList" />
         <item itemvalue="Application.formTest" />
-        <item itemvalue="Application.initial" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +166,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/views/bookListView/bookList.java</url>
           <line>76</line>
-          <properties class="org.example.wsoc.views.bookListView.bookList" method="main">
+          <properties class="org.example.wsoc.views.bookListView.bookList">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -180,6 +181,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/views/elements/form.java</url>
           <line>52</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
