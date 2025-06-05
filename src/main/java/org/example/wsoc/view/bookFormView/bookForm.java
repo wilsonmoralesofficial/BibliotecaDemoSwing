@@ -1,5 +1,8 @@
 package org.example.wsoc.view.bookFormView;
 
+import org.example.wsoc.model.book;
+import org.example.wsoc.presenter.bookFormPresenter;
+import org.example.wsoc.presenter.bookListPresenter;
 import org.example.wsoc.view.bookListView.bookList;
 import org.example.wsoc.view.elements.button;
 import org.example.wsoc.view.elements.form;
@@ -9,6 +12,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 public class bookForm {
 
@@ -21,6 +28,11 @@ public class bookForm {
 
     private static button bookButtonForm =  new button();
 
+    private  static bookFormPresenter presenterForm = new bookFormPresenter();
+
+    private static book currentBook = new book();
+
+    private static boolean editMode = false;
     public bookForm(){
         createInitialView();
     }
@@ -36,6 +48,7 @@ public class bookForm {
 
     private static JButton createSaveButtonPanel(String textButton, ActionListener actioSave){
         JButton buttonCreate = bookButtonForm.createRightButtonPanel(textButton,actioSave);
+
         return buttonCreate;
     }
 
@@ -48,7 +61,11 @@ public class bookForm {
         return new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                bookFormPresenter.saveDataBook(currentBook,booksForm.getFieldValues(),editMode);
+                showFormBookPanel(false);
+                bookList.removeBooksTable();
+                bookList.createInitialView();
+                bookList.showBookListPanel(true);
             }
         };
     }
@@ -82,6 +99,33 @@ public class bookForm {
 
     public static void showFormBookPanel(boolean show){
         InitialWindow.setVisible(show);
+
     }
+
+    public static void validateEditionMode(boolean editionMode,book dataBook){
+        if (editionMode){
+            editMode = editionMode;
+            currentBook = dataBook;
+            booksForm.setFieldValues(getFormValues(dataBook));
+        }else
+        {
+            editMode = editionMode;
+            booksForm.setFieldValues(initValuesForm());
+        }
+    }
+
+    public static Map<String, String> getFormValues(book dataBook){
+        return presenterForm.mapDataEditForm(dataBook);
+    }
+
+    public static Map<String, String> initValuesForm(){
+        Map<String, String> initValues = new LinkedHashMap<>();
+        initValues.put("Título", "");
+        initValues.put("Autor", "");
+        initValues.put("ISBN", "");
+        initValues.put("Año Publicación", "");
+        return initValues;
+    }
+
 
 }

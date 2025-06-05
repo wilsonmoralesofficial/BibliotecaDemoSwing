@@ -9,6 +9,10 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.event.ListSelectionEvent;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 
 public class bookListPresenter {
@@ -18,34 +22,19 @@ public class bookListPresenter {
 
     }
 
-    public static void editSelectedRow(JTable table){
+    public static boolean editSelectedRow(int selectedRow,List<book>booksTable){
 
-        table.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent e) {
-                // valueIsAdjusting es true mientras el usuario está arrastrando la selección.
-                // Queremos actuar solo cuando la selección finaliza.
-                if (!e.getValueIsAdjusting()) {
-                    int selectedRow = table.getSelectedRow(); // Obtiene el índice de la fila seleccionada
+        bookFormPresenter bookFormPresenterInstance = new bookFormPresenter();
+        bookFormPresenterInstance.dataEditBookForm = booksTable.get(selectedRow);
+        if (bookFormPresenterInstance.dataEditBookForm != null){
+            return true;
+        }
+        return false;
 
-                    if (selectedRow != -1) { // Asegúrate de que una fila esté realmente seleccionada
-                        // Obtiene el objeto Cliente de tu modelo de tabla
-                        // Es importante usar el método getClienteAt de tu modelo si lo tienes
-                        book selectedBook = bookTable.getBookAt(selectedRow);
-
-                        // --- **Paso Clave 3: Mandar los datos al formulario de destino** ---
-                        if (selectedBook != null) {
-                            System.out.println(selectedBook);
-                            //detallesClienteFrame.cargarDatosCliente(clienteSeleccionado);
-                        }
-                    }
-                }
-            }
-        });
     }
 
-    public static book[][] getBooks(){
-        book[][] data = {};
+    public static List<book> getBooks(){
+        List<book> data = new ArrayList<>();
 
         Connection connectionListBook = null;
         try {
@@ -57,8 +46,13 @@ public class bookListPresenter {
                  java.sql.Statement stmt = connectionListBook.createStatement();
                  java.sql.ResultSet rs = stmt.executeQuery("SELECT * FROM books");
                  while (rs.next()) {
-                     //System.out.println(rs);
-                     System.out.println("Libro ID: " + rs.getInt("Id") + ", Título: " + rs.getString("Titulo"));
+                     book bookDB = new book();
+                     bookDB.Id = rs.getInt("Id");
+                     bookDB.Titulo = rs.getString("Titulo");
+                     bookDB.Autor = rs.getString("Autor");
+                     bookDB.ISBN = rs.getString("ISBN");
+                     bookDB.AnioPublicacion = rs.getInt("AnioPublicacion");
+                     data.add(bookDB);
                  }
                  rs.close();
                  stmt.close();
@@ -71,5 +65,43 @@ public class bookListPresenter {
         }
 
         return data;
+    }
+
+    public static boolean deleteDataBook(book dataBook){
+
+        boolean resultData;
+
+
+        Connection connectionFormBook = null;
+        try {
+
+            connectionFormBook = conn.getConnection();
+            // --- Aquí es donde realizarías tus operaciones con la base de datos ---
+            // Por ejemplo, ejecutar una consulta:
+            if (connectionFormBook != null) {
+                String queryForm = "DELETE FROM Books WHERE Id = " + dataBook.Id;
+                Statement stmt = connectionFormBook.createStatement();
+                int affectedRows = stmt.executeUpdate(queryForm);//executeUpdate() Forma estandar
+                // de ejecutar datos.
+                if (affectedRows > 0)
+                {
+                    //Alertas
+                    System.out.println(affectedRows);
+                    return true;
+                }else
+                {
+                    //Alertas
+                    System.out.println(affectedRows);
+                    return false;
+                }
+
+            }
+            return true;
+        } catch (SQLException e) {
+            System.out.println(e);
+            return false;
+        } finally {
+            connectionDB.closeConnection(connectionFormBook);
+        }
     }
 }

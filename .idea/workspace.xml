@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0810a-3f02-4ddb-8124-655b8c59e1ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/bookCopy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/bookCopyTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/bookTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/main/bibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/main/bibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/util/connectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/util/connectionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/form.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,19 +41,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "298",
-    "last_opened_file_path": "C:/Users/wsoc/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;298&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/wsoc/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\wsoc\Desktop\BootCamp\project-bootcamp\BibliotecaDemoSwing\src\main\java\org\example\wsoc\views" />
@@ -183,20 +180,54 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="28" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

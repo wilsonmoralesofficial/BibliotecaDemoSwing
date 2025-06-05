@@ -6,7 +6,7 @@ public class book {
     public String Titulo;
     public String Autor;
     public String ISBN;
-    public String AnioPublicacion;
+    public int AnioPublicacion;
 
 
     public int getId() {
@@ -25,7 +25,7 @@ public class book {
         return ISBN;
     }
 
-    public String getAnioPublicacion() {
+    public int getAnioPublicacion() {
         return AnioPublicacion;
     }
 

@@ -67,4 +67,12 @@ public class form extends JPanel{
         return values;
     }
 
+    public void setFieldValues(Map<String, String> initialValues) {
+        for (Map.Entry<String, String> entry : initialValues.entrySet()) {
+            JTextField textField = fieldsMap.get(entry.getKey());
+            if (textField != null) {
+                textField.setText(entry.getValue());
+            }
+        }
+    }
 }

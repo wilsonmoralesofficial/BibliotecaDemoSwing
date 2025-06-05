@@ -1,4 +1,5 @@
 package org.example.wsoc.view.bookListView;
+import org.example.wsoc.model.book;
 import org.example.wsoc.presenter.bookListPresenter;
 import org.example.wsoc.view.bookFormView.bookForm;
 import org.example.wsoc.view.elements.button;
@@ -9,6 +10,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class bookList {
 
@@ -16,30 +19,46 @@ public class bookList {
     private static JPanel JTablePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
     private static initialFrame InitialWindow = new initialFrame();
-    private static table bookTable = new table();
 
+    private static String[] columns = {"Id","Titulo","Autor","ISBN","Año de Publicación"};
+    private static table bookTable = new table();
+    public static String[][] dataJTable = {};
     private static button bookButton =  new button();
     private  static bookListPresenter presenteList = new bookListPresenter();
+
+    private static List<book> currentListBook = new ArrayList<>();
+
 
     public bookList(){createInitialView();}
 
     public static void createInitialView(){
 
-        String[] columns = {"Id","Titulo","Autor","ISBN","Año de Publicación"};
-        String[][] datos = getBooksAvailable();
+        dataJTable = getBooksAvailable();
         createButtonsTable();
-        createBookTable(datos,columns);
+        createBookTable(dataJTable,columns);
         InitialWindow.setVisible(true);
     }
 
     private static String[][] getBooksAvailable(){
-        String[][] books = {{}};
-        presenteList.getBooks();
-        return books;
+        currentListBook = presenteList.getBooks();
+        book bookData = null;
+
+        List<String[]> booksDataString = new ArrayList<>();
+        for (int i = 0; i < currentListBook.size(); i++){
+            bookData = currentListBook.get(i);
+            String[] stringBookData = {Integer.toString(bookData.Id),
+                    bookData.Titulo,bookData.Autor,bookData.ISBN,
+                    Integer.toString(bookData.AnioPublicacion)};
+            booksDataString.add(stringBookData);
+        }
+
+        String[][] booksString = booksDataString.toArray(new String[booksDataString.size()][]);
+        return booksString;
     }
     private static void createButtonsTable(){
         JPanelButton.add(createBookButtonRight("Registrar Libro",actionButtonCreateBook()));
         JPanelButton.add(editBookButtonRight("Editar Libro Selecionado",actionButtonEditBook()));
+        JPanelButton.add(deleteBookButtonRight("Eliminar Libro Selecionado",actionButtonDeleteBook()));
         InitialWindow.add(JPanelButton,BorderLayout.NORTH);
     }
     private static void createBookTable(String[][]data,String[]columns){
@@ -51,9 +70,13 @@ public class bookList {
         return buttonCreate;
 
     }
-
     private static JButton editBookButtonRight(String textButton, ActionListener ac){
         JButton buttonEdit = bookButton.createRightButtonPanel(textButton,actionButtonEditBook());
+        return buttonEdit;
+    }
+
+    private static JButton deleteBookButtonRight(String textButton, ActionListener ac){
+        JButton buttonEdit = bookButton.createRightButtonPanel(textButton,actionButtonDeleteBook());
         return buttonEdit;
     }
     public static ActionListener actionButtonCreateBook(){
@@ -61,7 +84,9 @@ public class bookList {
             @Override
             public void actionPerformed(ActionEvent e) {
                 InitialWindow.setVisible(false);
+                bookForm.validateEditionMode(false,currentListBook.get(0));//Se envía cero pero realmente no se utilizará
                 bookForm.showFormBookPanel(true);
+                removeBooksTable();
             }
         };
     }
@@ -70,8 +95,27 @@ public class bookList {
         return new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                bookListPresenter.editSelectedRow(bookTable.listTable);
-                //System.out.println("Mostrar Formulario Editar");
+                Boolean editionMode = bookListPresenter.editSelectedRow(bookTable.listTable.getSelectedRow(),currentListBook);
+                bookForm.validateEditionMode(editionMode,currentListBook.get(bookTable.listTable.getSelectedRow()));
+                bookForm.showFormBookPanel(true);
+                bookList.showBookListPanel(false);
+            }
+        };
+    }
+
+    public static ActionListener actionButtonDeleteBook(){
+
+        return new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Boolean deleteSuccess = bookListPresenter.deleteDataBook(currentListBook.get(bookTable.listTable.getSelectedRow()));
+                if (deleteSuccess){
+                    removeBooksTable();
+                    createInitialView();
+                    //Alerta Exito
+                }else {
+                    //Alerta Fallo
+                }
             }
         };
     }
@@ -80,11 +124,10 @@ public class bookList {
         InitialWindow.setVisible(show);
     }
 
-
-
-    /*public static void main(String[] args) {
-        //createInitialView();
+    public static void removeBooksTable(){
+        dataJTable = getBooksAvailable();
+        InitialWindow.remove(JPanelButton);
+        InitialWindow.remove(bookTable.listPanel);
     }
-     */
 
 }
