@@ -6,14 +6,14 @@ import java.util.LinkedHashMap; // Usamos LinkedHashMap para mantener el orden d
 // y para almacenar los JTextField asociados a cada nombre de campo.
 import java.util.Map;
 
-public class formTest extends JPanel {
+public class no_use_form extends JPanel {
     private Map<String, JTextField> fieldsMap;
 
     /**
      * Constructor para crear un formulario dinámico.
      * @param fieldNames Un array de Strings con los nombres de los campos deseados.
      */
-    public formTest(String[] fieldNames) {
+    public no_use_form(String[] fieldNames) {
         // Usamos GridBagLayout para un diseño flexible y alineado
         setLayout(new GridBagLayout());
         fieldsMap = new LinkedHashMap<>();

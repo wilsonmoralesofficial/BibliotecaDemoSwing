@@ -1,18 +1,13 @@
 package org.example.wsoc.presenter;
 
 import org.example.wsoc.model.book;
-import org.example.wsoc.model.bookTable;
 import org.example.wsoc.util.connectionDB;
 
-import javax.swing.*;
-import javax.swing.event.ListSelectionListener;
-import javax.swing.event.ListSelectionEvent;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 
 public class bookListPresenter {
@@ -40,8 +35,7 @@ public class bookListPresenter {
         try {
 
              connectionListBook = conn.getConnection();
-            // --- Aquí es donde realizarías tus operaciones con la base de datos ---
-            // Por ejemplo, ejecutar una consulta:
+
              if (connectionListBook != null) {
                  java.sql.Statement stmt = connectionListBook.createStatement();
                  java.sql.ResultSet rs = stmt.executeQuery("SELECT * FROM books");
@@ -59,7 +53,7 @@ public class bookListPresenter {
              }
 
         } catch (SQLException e) {
-            return data;
+            return null;
         } finally {
             connectionDB.closeConnection(connectionListBook);
         }
@@ -68,9 +62,6 @@ public class bookListPresenter {
     }
 
     public static boolean deleteDataBook(book dataBook){
-
-        boolean resultData;
-
 
         Connection connectionFormBook = null;
         try {

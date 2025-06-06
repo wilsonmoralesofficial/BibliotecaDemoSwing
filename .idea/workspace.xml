@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0810a-3f02-4ddb-8124-655b8c59e1ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/wsoc/formTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/main/bibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/main/bibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/formTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/listBook.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,51 +180,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/views/elements/form.java</url>
           <line>52</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />

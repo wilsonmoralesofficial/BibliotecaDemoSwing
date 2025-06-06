@@ -29,7 +29,6 @@ public class bookFormPresenter {
         return true;
     }
 
-
     public Map<String, String> mapDataEditForm(book dataBookForm){
         Map<String, String> initialValue = new LinkedHashMap<>();
         initialValue.put("Título", dataBookForm.Titulo);
@@ -41,12 +40,8 @@ public class bookFormPresenter {
 
     public static boolean saveDataBook(book dataBook,Map<String, String> formValues,boolean editionMode){
 
-        boolean resultData;
-
-
         Connection connectionFormBook = null;
         try {
-
             connectionFormBook = conn.getConnection();
             // --- Aquí es donde realizarías tus operaciones con la base de datos ---
             // Por ejemplo, ejecutar una consulta:
@@ -55,9 +50,9 @@ public class bookFormPresenter {
                 if (editionMode)
                 {
                     queryForm ="UPDATE Books " +
-                            "SET Titulo= '" + formValues.get("Título") +"', Autor= '" + formValues.get("Autor")+
-                            "', ISBN = '"+ formValues.get("ISBN") + "', AnioPublicacion= '" + formValues.get("Año Publicación") +"'"+
-                            " WHERE Id= " + dataBook.Id;
+                                "SET Titulo= '" + formValues.get("Título") +"', Autor= '" + formValues.get("Autor")+
+                                "', ISBN = '"+ formValues.get("ISBN") + "', AnioPublicacion= '" + formValues.get("Año Publicación") +"'"+
+                                " WHERE Id= " + dataBook.Id;
                 }else {
                     queryForm ="INSERT INTO Books " +
                             "(Titulo, Autor, ISBN, AnioPublicacion) " +

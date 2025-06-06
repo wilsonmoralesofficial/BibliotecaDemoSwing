@@ -4,7 +4,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
-public class listBook extends JFrame{
+public class no_use_listBook extends JFrame{
     public JScrollPane bookListScrollPane;
     public JTable bookListTable;
     public JPanel bookListPanel;
