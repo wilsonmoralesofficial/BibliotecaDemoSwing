@@ -50,7 +50,7 @@ public class form extends JPanel{
         add(label, gbc);
     }
     public void createTextField(String fieldName,GridBagConstraints gbc, int row){
-        JTextField textField = new JTextField(20); // Ancho inicial de 20 columnas
+        JTextField textField = new JTextField(10); // Ancho inicial de 20 columnas
         fieldsMap.put(fieldName, textField); // Guardamos la referencia al JTextField
         gbc.gridx = 1; // Columna 1 para los campos de texto
         gbc.gridy = row; // Fila actual

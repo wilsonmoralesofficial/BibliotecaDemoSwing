@@ -5,8 +5,8 @@ public class bookCopy {
     public int IdLibro;
     public String NumeroInventario;
     public String EstadoFisico;
-    public String FechaUltimoPrestamo;
-
+    public String UbicacionEstanteria;
+    public String Disponible;
 
     public int getId() {
         return Id;
@@ -24,7 +24,7 @@ public class bookCopy {
         return EstadoFisico;
     }
 
-    public String getFechaUltimoPrestamo() {
-        return FechaUltimoPrestamo;
-    }
+    public String getUbicacionEstanteria() { return UbicacionEstanteria;}
+
+    public String getDisponible() { return Disponible;}
 }
