@@ -21,30 +21,51 @@ import java.util.Map;
 public class bookForm {
 
     public static JPanel JPanelButton = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 5));
+    //Contenedor de los botones
 
     public static  JPanel auxJPanelContainer = new JPanel();
-    private static JPanel jPanelTable = new JPanel();
-    private static JPanel JPanelForm = new JPanel(new FlowLayout(FlowLayout.RIGHT, 5, 2));
-    private static initialFrame InitialWindow = new initialFrame(); // Crea un frame
-    private static form booksForm = new form();
-    private static button bookButtonForm =  new button();
-    private  static bookFormPresenter presenterForm = new bookFormPresenter();
-    public static book currentBook = new book();
-    private static table bookCopyTable = new table();
+    //Contenedor de los Jpanes de formulario y la tabla de ejemplares de cada libro
 
+    private static JPanel jPanelTable = new JPanel();
+    //Contenedor de la tabla
+
+    private static JPanel JPanelForm = new JPanel(new FlowLayout(FlowLayout.RIGHT, 5, 2));
+    //Contenedor del formulario
+
+    private static initialFrame InitialWindow = new initialFrame();
+    // Crea un frame
+    private static form booksForm = new form();
+    //Instancia de la clase Form que maneja la logica de los formularios
+
+    private static button bookButtonForm =  new button();
+    //Instancia de la clase button que maneja la logica de la creación de botones
+
+    private  static bookFormPresenter presenterForm = new bookFormPresenter();
+    //Instancia de la clase bookFormPresenter que maneja la funcionalidad de la aplicación.
+    // Solicitudes a bases de datos etc.
+
+    public static book currentBook = new book();
+    // Instancia del modelo book que tendra los datos de libro que se está mostrando actualmente en el formulario
+    private static table bookCopyTable = new table();
+    //Instancia de la clase table que maneja la logica para la creación de tablas en el Frame.
     public static String[][] dataJTableCopyBook = {};
+    //Datos de la tabla de ejemplares
     private static List<bookCopy> currentListCopyBook = new ArrayList<>();
+    //Listado de ejemplares del libro actual
     private static boolean editMode = false;
+    // Variable que maneja si se está en modo edición o en modo de creación
+    // "editMode = true -- Modo Edición" "editMode = false -- Modo Creación"
+
+
     public bookForm(){
         createInitialView();
     }
-    private static void createInitialView(){
 
+    private static void createInitialView(){
         JPanelButton.add(createSaveButtonPanel("Guardar Datos",actionButtonSaveBook()));
         JPanelButton.add(createCancelButtonPanel("Volver",actionButtonCancelBook()));
         InitialWindow.add(JPanelButton,BorderLayout.NORTH);
         createFormBook();
-
     }
 
     private static JButton createSaveButtonPanel(String textButton, ActionListener actioSave){
@@ -69,10 +90,7 @@ public class bookForm {
                 if (editMode)JPanelButton.remove(2);
                 validateSaveDataBook(bookFormPresenter.saveDataBook(currentBook,booksForm.getFieldValues(),editMode));
                 showFormBookPanel(false);
-                bookList.removeBooksTable();
-                bookList.createInitialView();
-                bookList.showBookListPanel(true);
-                removeCopyBooksTable();
+                manageDataUpdateCopyBooksTable();
             }
         };
     }
@@ -92,10 +110,7 @@ public class bookForm {
             public void actionPerformed(ActionEvent e) {
                 if (editMode)JPanelButton.remove(2);
                 InitialWindow.setVisible(false);
-                bookList.removeBooksTable();
-                bookList.createInitialView();
-                bookList.showBookListPanel(true);
-                removeCopyBooksTable();
+                manageDataUpdateCopyBooksTable();
             }
         };
     }
@@ -121,14 +136,16 @@ public class bookForm {
         booksForm.buildDynamicForm(camposLibro,gbc);
         // Añadimos el formulario y el panel de botones al frame
 
+        addFormToPanelForm();
+    }
+
+    private static void addFormToPanelForm(){
         JPanelForm.add(booksForm,BorderLayout.CENTER);
         JPanelForm.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 10));
         auxJPanelContainer.setLayout(new BoxLayout(auxJPanelContainer, BoxLayout.Y_AXIS));
         auxJPanelContainer.add(JPanelForm);
         auxJPanelContainer.add(Box.createRigidArea(new Dimension(0, 10)));
-
     }
-
     public static void showFormBookPanel(boolean show){
         InitialWindow.setVisible(show);
     }
@@ -143,9 +160,8 @@ public class bookForm {
         }else
         {
             editMode = false;
-            booksForm.setFieldValues(initValuesForm());
+            booksForm.setFieldValues(initValuesBookForm());
         }
-
         InitialWindow.add(auxJPanelContainer);
     }
 
@@ -153,7 +169,7 @@ public class bookForm {
         return presenterForm.mapDataEditForm(dataBook);
     }
 
-    public static Map<String, String> initValuesForm(){
+    public static Map<String, String> initValuesBookForm(){
         Map<String, String> initValues = new LinkedHashMap<>();
         initValues.put("Título", "");
         initValues.put("Autor", "");
@@ -162,12 +178,8 @@ public class bookForm {
         return initValues;
     }
 
-
     public static void initializeTableCopyBook(){
-
-        String[] colBooksCopy = {"Id ",
-                "Numero de Inventario","Estado Fisico",
-                "Ubicación Estanteria","Disponible"};
+        String[] colBooksCopy = {"Id ","Numero de Inventario","Estado Fisico","Ubicación Estanteria","Disponible"};
         dataJTableCopyBook = getCopyBooksAvailable();
         createBookCopyTable(dataJTableCopyBook,colBooksCopy);
     }
@@ -176,6 +188,7 @@ public class bookForm {
         currentListCopyBook = presenterForm.getCopyBooks(currentBook);
         return validateListCopyBook(currentListCopyBook);
     }
+
     private static void createBookCopyTable(String[][]data,String[]columns){
         jPanelTable = new JPanel();
         jPanelTable = bookCopyTable.addJpanelTable(data,columns);
@@ -210,6 +223,11 @@ public class bookForm {
         auxJPanelContainer.remove(bookCopyTable.listPanel);
     }
 
-
+    public static void manageDataUpdateCopyBooksTable(){
+        bookList.removeBooksTable();
+        bookList.createInitialView();
+        bookList.showBookListPanel(true);
+        removeCopyBooksTable();
+    }
 
 }

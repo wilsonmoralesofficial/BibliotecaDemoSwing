@@ -1,7 +1,4 @@
 package org.example.wsoc.view.bookFormView;
-
-import org.example.wsoc.model.book;
-import org.example.wsoc.model.bookCopy;
 import org.example.wsoc.presenter.bookFormPresenter;
 import org.example.wsoc.view.elements.button;
 import org.example.wsoc.view.elements.form;
@@ -20,10 +17,6 @@ public class copyBookForm {
     private static initialFrame InitialWindow = new initialFrame(); // Crea un frame
     private static button copyBookButtonForm =  new button();
     private static form copyBookForm = new form();
-
-
-
-
 
     public copyBookForm(){
         createInitialViewCopyBook();

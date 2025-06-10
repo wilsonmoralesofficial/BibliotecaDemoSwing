@@ -3,7 +3,6 @@ package org.example.wsoc.presenter;
 import org.example.wsoc.model.book;
 import org.example.wsoc.model.bookCopy;
 import org.example.wsoc.util.connectionDB;
-import org.example.wsoc.view.elements.form;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -21,14 +20,6 @@ public class bookFormPresenter {
     public bookFormPresenter(){
     }
 
-    public boolean validateEditMode(){
-        // Se valida que el objeto book no sea null para
-        // entrar en modo edición o modo creación.
-        if (dataEditBookForm != null){
-            return false;
-        }
-        return true;
-    }
 
     public Map<String, String> mapDataEditForm(book dataBookForm){
         Map<String, String> initialValue = new LinkedHashMap<>();
@@ -124,13 +115,6 @@ public class bookFormPresenter {
             if (connectionFormBook != null) {
                 String queryForm = "";
 
-                //if (editionMode)
-                //{
-                //queryForm ="UPDATE Books " +
-                // "SET Titulo= '" + formValues.get("Título") +"', Autor= '" + formValues.get("Autor")+
-                //"', ISBN = '"+ formValues.get("ISBN") + "', AnioPublicacion= '" + formValues.get("Año Publicación") +"'"+
-                //            " WHERE Id= " + dataBook.Id;
-                //}else {
 
                     queryForm ="INSERT INTO copyBooks " +
                             "(IdLibro, NumeroInventario, EstadoFisico, UbicacionEstanteria, Disponible) " +

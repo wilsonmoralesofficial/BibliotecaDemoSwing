@@ -8,7 +8,7 @@ public class initialFrame extends JFrame{
 
 
     public initialFrame (){
-        super("Bibloteca"); // Crea una nueva ventana inicialmente invisible.
+        super("Bibloteca Colaboradores Seguros G&T"); // Crea una nueva ventana inicialmente invisible.
         configureInitialWindow();
         // Siempre utilizar setVisible(true); al concluir las implementaciones
     }
