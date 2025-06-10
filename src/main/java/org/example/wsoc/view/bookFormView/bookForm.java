@@ -23,6 +23,7 @@ public class bookForm {
     public static JPanel JPanelButton = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 5));
 
     public static  JPanel auxJPanelContainer = new JPanel();
+    private static JPanel jPanelTable = new JPanel();
     private static JPanel JPanelForm = new JPanel(new FlowLayout(FlowLayout.RIGHT, 5, 2));
     private static initialFrame InitialWindow = new initialFrame(); // Crea un frame
     private static form booksForm = new form();
@@ -40,7 +41,7 @@ public class bookForm {
     private static void createInitialView(){
 
         JPanelButton.add(createSaveButtonPanel("Guardar Datos",actionButtonSaveBook()));
-        JPanelButton.add(createCancelButtonPanel("Cancelar",actionButtonCancelBook()));
+        JPanelButton.add(createCancelButtonPanel("Volver",actionButtonCancelBook()));
         InitialWindow.add(JPanelButton,BorderLayout.NORTH);
         createFormBook();
 
@@ -163,6 +164,7 @@ public class bookForm {
 
 
     public static void initializeTableCopyBook(){
+
         String[] colBooksCopy = {"Id ",
                 "Numero de Inventario","Estado Fisico",
                 "Ubicación Estanteria","Disponible"};
@@ -175,7 +177,9 @@ public class bookForm {
         return validateListCopyBook(currentListCopyBook);
     }
     private static void createBookCopyTable(String[][]data,String[]columns){
-        auxJPanelContainer.add(bookCopyTable.addJpanelTable(data,columns));
+        jPanelTable = new JPanel();
+        jPanelTable = bookCopyTable.addJpanelTable(data,columns);
+        auxJPanelContainer.add(jPanelTable);
     }
 
     private static String[][] validateListCopyBook(List<bookCopy> currentCopyBooks){
@@ -205,5 +209,7 @@ public class bookForm {
     public static void removeCopyBooksTable(){
         auxJPanelContainer.remove(bookCopyTable.listPanel);
     }
+
+
 
 }

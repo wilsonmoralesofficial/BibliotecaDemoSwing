@@ -73,26 +73,4 @@ public class connectionDB {
             }
         }
 
-        /*public static void main(String[] args) {
-            Connection conn = null;
-            try {
-                conn = getConnection(); // Obtener la conexión
-
-                // --- Aquí es donde realizarías tus operaciones con la base de datos ---
-                // Por ejemplo, ejecutar una consulta:
-                // if (conn != null) {
-                //     java.sql.Statement stmt = conn.createStatement();
-                //     java.sql.ResultSet rs = stmt.executeQuery("SELECT * FROM Libros");
-                //     while (rs.next()) {
-                //         System.out.println("Libro ID: " + rs.getInt("ID_Libro") + ", Título: " + rs.getString("Titulo"));
-                //     }
-                //     rs.close();
-                //     stmt.close();
-                // }
-
-            } finally {
-                closeConnection(conn); // Asegúrate de cerrar la conexión en el bloque finally
-            }
-        }
-         */
 }

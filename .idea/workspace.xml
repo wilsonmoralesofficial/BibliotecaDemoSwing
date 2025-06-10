@@ -7,10 +7,13 @@
     <list default="true" id="9ea0810a-3f02-4ddb-8124-655b8c59e1ad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/main/bibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/main/bibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/bookCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/bookCopy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/bookCopyTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/model/bookTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/util/connectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/util/connectionDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/form.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/copyBookForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/copyBookForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/no_use_form.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/no_use_listBook.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,17 +178,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>173</line>
+          <line>175</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>205</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>177</line>
+          <line>181</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>

@@ -32,7 +32,7 @@ public class copyBookForm {
     public static void createInitialViewCopyBook(){
 
         JPanelButton.add(createSaveButtonPanel("Guardar Datos",actionButtonSaveCopyBook()));
-        JPanelButton.add(createCancelButtonPanel("Cancelar",actionButtonCancelBook()));
+        JPanelButton.add(createCancelButtonPanel("Volver",actionButtonCancelBook()));
         InitialWindow.add(JPanelButton, BorderLayout.NORTH);
         createFormCopyBook();
     }
@@ -53,10 +53,10 @@ public class copyBookForm {
             public void actionPerformed(ActionEvent e) {
                 validateSaveDataCopyBook(bookFormPresenter.saveDataCopyBook(copyBookForm.getFieldValues(),bookForm.currentBook));
                 InitialWindow.setVisible(false);
-                bookForm.showFormBookPanel(true);
                 copyBookForm.setFieldValues(initValuesFormCopyBooks());
                 bookForm.removeCopyBooksTable();
                 bookForm.initializeTableCopyBook();
+                bookForm.showFormBookPanel(true);
             }
         };
     }
@@ -66,10 +66,10 @@ public class copyBookForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 InitialWindow.setVisible(false);
-                bookForm.showFormBookPanel(true);
                 copyBookForm.setFieldValues(initValuesFormCopyBooks());
-                bookForm.auxJPanelContainer.remove(1);
+                bookForm.removeCopyBooksTable();
                 bookForm.initializeTableCopyBook();
+                bookForm.showFormBookPanel(true);
             }
         };
     }
