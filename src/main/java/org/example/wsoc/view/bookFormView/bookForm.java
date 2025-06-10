@@ -124,6 +124,7 @@ public class bookForm {
             }
         };
     }
+
     private static void createFormBook(){
 
         // Definimos los campos que queremos en nuestro formulario
@@ -135,7 +136,6 @@ public class bookForm {
         // Creamos una instancia de nuestro formulario dinámico
         booksForm.buildDynamicForm(camposLibro,gbc);
         // Añadimos el formulario y el panel de botones al frame
-
         addFormToPanelForm();
     }
 
@@ -146,6 +146,7 @@ public class bookForm {
         auxJPanelContainer.add(JPanelForm);
         auxJPanelContainer.add(Box.createRigidArea(new Dimension(0, 10)));
     }
+
     public static void showFormBookPanel(boolean show){
         InitialWindow.setVisible(show);
     }

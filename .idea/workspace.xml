@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9ea0810a-3f02-4ddb-8124-655b8c59e1ad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/copyBookForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/copyBookForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/initialFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/initialFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +29,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2xvsY5xUOqW8HYLT7sc6RdEw0vp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,7 +46,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "298",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/wsoc/Desktop/BootCamp/project-bootcamp/BibliotecaDemoSwing",
+    "last_opened_file_path": "C:/Users/wsoc/Desktop/projects_gyt/bussiness_management",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -160,7 +157,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748829927428</updated>
-      <workItem from="1749578547961" duration="6909000" />
+      <workItem from="1749578547961" duration="6970000" />
+      <workItem from="1749591053023" duration="31000" />
     </task>
     <servers />
   </component>
@@ -183,23 +181,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java</url>
-          <line>138</line>
+          <line>122</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>187</line>
+          <line>201</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>194</line>
+          <line>208</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>167</line>
-          <properties class="org.example.wsoc.view.bookFormView.bookForm" method="getFormValues">
+          <line>183</line>
+          <properties class="org.example.wsoc.view.bookFormView.bookForm">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
