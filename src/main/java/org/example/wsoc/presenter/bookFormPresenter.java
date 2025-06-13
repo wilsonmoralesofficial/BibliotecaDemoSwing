@@ -2,7 +2,7 @@ package org.example.wsoc.presenter;
 
 import org.example.wsoc.model.book;
 import org.example.wsoc.model.bookCopy;
-import org.example.wsoc.util.connectionDB;
+import org.example.wsoc.db.connectionDB;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -14,12 +14,7 @@ import java.util.Map;
 
 public class bookFormPresenter {
 
-    private static connectionDB conn = new connectionDB();
-    public book dataEditBookForm = null;
-
-    public bookFormPresenter(){
-    }
-
+    public static book dataEditBookForm = null;
 
     public Map<String, String> mapDataEditForm(book dataBookForm){
         Map<String, String> initialValue = new LinkedHashMap<>();
@@ -34,11 +29,12 @@ public class bookFormPresenter {
 
         Connection connectionFormBook = null;
         try {
-            connectionFormBook = conn.getConnection();
-            // --- Aquí es donde realizarías tus operaciones con la base de datos ---
-            // Por ejemplo, ejecutar una consulta:
+            connectionFormBook = connectionDB.getConnection();
+
+            // Luego de validar la conexión se inicia
+            // con los querys a las tablas correspondientes.
             if (connectionFormBook != null) {
-                String queryForm = "";
+                String queryForm;
                 if (editionMode)
                 {
                     queryForm ="UPDATE Books " +
@@ -79,7 +75,7 @@ public class bookFormPresenter {
         Connection connectionListCopyBook = null;
         try {
 
-            connectionListCopyBook = conn.getConnection();
+            connectionListCopyBook = connectionDB.getConnection();
 
             if (connectionListCopyBook != null) {
                 java.sql.Statement stmt = connectionListCopyBook.createStatement();
@@ -109,7 +105,7 @@ public class bookFormPresenter {
     public static boolean saveDataCopyBook(Map<String, String> formValues,book bookData){
         Connection connectionFormBook = null;
         try {
-            connectionFormBook = conn.getConnection();
+            connectionFormBook = connectionDB.getConnection();
             // --- Aquí es donde realizarías tus operaciones con la base de datos ---
             // Por ejemplo, ejecutar una consulta:
             if (connectionFormBook != null) {

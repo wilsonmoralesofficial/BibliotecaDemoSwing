@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0810a-3f02-4ddb-8124-655b8c59e1ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java.utils.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/utils/bookFormUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/utils/bookListUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/viewConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/main/bibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/main/bibliotecaApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookListPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/util/connectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/db/connectionDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/copyBookForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/copyBookForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookListView/bookList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/wsoc/view/elements/table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,29 +49,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.bibliotecaApp.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "298",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/wsoc/Desktop/projects_gyt/bussiness_management",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.bibliotecaApp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;298&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/wsoc/Desktop/projects_gyt/bussiness_management&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\wsoc\Desktop\BootCamp\project-bootcamp\BibliotecaDemoSwing\src\main\java\org\example\wsoc\views" />
@@ -159,6 +176,11 @@
       <updated>1748829927428</updated>
       <workItem from="1749578547961" duration="6970000" />
       <workItem from="1749591053023" duration="31000" />
+      <workItem from="1749592336708" duration="749000" />
+      <workItem from="1749649129567" duration="17804000" />
+      <workItem from="1749668144470" duration="9129000" />
+      <workItem from="1749734522635" duration="1269000" />
+      <workItem from="1749819823827" duration="25310000" />
     </task>
     <servers />
   </component>
@@ -181,28 +203,32 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/presenter/bookFormPresenter.java</url>
-          <line>122</line>
+          <line>118</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>201</line>
-          <option name="timeStamp" value="33" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/utils/bookFormUtils.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>208</line>
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/utils/bookFormUtils.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/bookForm.java</url>
-          <line>183</line>
-          <properties class="org.example.wsoc.view.bookFormView.bookForm">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/wsoc/view/bookFormView/utils/bookFormUtils.java</url>
+          <line>26</line>
+          <properties class="org.example.wsoc.view.bookFormView.utils.bookFormUtils" method="initializeTableCopyBook">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="36" />
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="59" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -11,7 +11,6 @@ public class table extends JFrame{
 
     public JPanel createTablePanel(String[][] Data ,String[] Columns){
         listPanel = new JPanel(new BorderLayout());
-
         DefaultTableModel tableModel = new DefaultTableModel(Data,Columns);
         listTable = new JTable(tableModel);
         listScrollPane = new JScrollPane(listTable);

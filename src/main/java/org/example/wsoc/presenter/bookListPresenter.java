@@ -1,7 +1,7 @@
 package org.example.wsoc.presenter;
 
 import org.example.wsoc.model.book;
-import org.example.wsoc.util.connectionDB;
+import org.example.wsoc.db.connectionDB;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -12,19 +12,11 @@ import java.util.List;
 
 public class bookListPresenter {
 
-    private static connectionDB conn = new connectionDB();
-    public bookListPresenter(){
-
-    }
 
     public static boolean editSelectedRow(int selectedRow,List<book>booksTable){
 
-        bookFormPresenter bookFormPresenterInstance = new bookFormPresenter();
-        bookFormPresenterInstance.dataEditBookForm = booksTable.get(selectedRow);
-        if (bookFormPresenterInstance.dataEditBookForm != null){
-            return true;
-        }
-        return false;
+        bookFormPresenter.dataEditBookForm = booksTable.get(selectedRow);
+        return bookFormPresenter.dataEditBookForm != null;
 
     }
 
@@ -34,7 +26,7 @@ public class bookListPresenter {
         Connection connectionListBook = null;
         try {
 
-             connectionListBook = conn.getConnection();
+             connectionListBook = connectionDB.getConnection();
 
              if (connectionListBook != null) {
                  java.sql.Statement stmt = connectionListBook.createStatement();
@@ -66,18 +58,23 @@ public class bookListPresenter {
         Connection connectionFormBook = null;
         try {
 
-            connectionFormBook = conn.getConnection();
+            connectionFormBook = connectionDB.getConnection();
             // --- Aquí es donde realizarías tus operaciones con la base de datos ---
             // Por ejemplo, ejecutar una consulta:
             if (connectionFormBook != null) {
-                String queryForm = "DELETE FROM Books WHERE Id = " + dataBook.Id;
+                String queryForm = "DELETE FROM books WHERE Id = " + dataBook.Id + ";";
+                String queryForm2 = " DELETE FROM copybooks WHERE IdLibro = " + dataBook.Id  + ";" ;
                 Statement stmt = connectionFormBook.createStatement();
+                Statement stmt2 = connectionFormBook.createStatement();
                 int affectedRows = stmt.executeUpdate(queryForm);//executeUpdate() Forma estandar
                 // de ejecutar datos.
                 if (affectedRows > 0)
                 {
                     //Alertas
                     System.out.println(affectedRows);
+                    int affectedRows2 = stmt2.executeUpdate(queryForm2);
+                    System.out.println(affectedRows2);
+                    System.out.println(affectedRows2 > 0 ?"Data CopyBooks is Deleted":"Data Deleted Error");
                     return true;
                 }else
                 {
@@ -89,7 +86,7 @@ public class bookListPresenter {
             }
             return true;
         } catch (SQLException e) {
-            System.out.println(e);
+            System.out.println("Error ==>" + e);
             return false;
         } finally {
             connectionDB.closeConnection(connectionFormBook);
